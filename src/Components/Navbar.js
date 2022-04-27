@@ -48,8 +48,8 @@ export default function Example() {
                         className={classNames(
                           item.current
                             ? "bg-gray-900 text-white"
-                            : "text-gray-300 hover:bg-gray-900",
-                          "px-3 py-2 rounded-md text-sm font-medium"
+                            : (item.name == "Teraki"? "hover:text-gray-900 text-white hover:bg-green-500":"text-gray-300 hover:bg-gray-900"),
+                          "px-3 py-2 rounded-md text-sm font-medium transition ease-in-out delay-150 hover:-translate-y-2"
                         )}
                         aria-current={item.current ? "page" : undefined}
                       >
