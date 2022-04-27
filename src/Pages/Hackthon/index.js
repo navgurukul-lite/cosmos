@@ -29,10 +29,11 @@ const Index = () => {
                 {list_topics.map((item) => {
                   return (
                     <a
+                    rel="noreferrer"
                     onClick={()=>changeActive(item)}
                       class={
                         "flex-grow border-b-2 py-2 text-lg px-1 cursor-pointer hover:border-orange-400 text-center hover:text-orange-400" +
-                        (item == active
+                        (item === active
                           ? " text-orange-500 border-orange-500"
                           : " border-gray-800")
                       }
@@ -45,7 +46,7 @@ const Index = () => {
               <div class="flex flex-wrap w-full">
                 <div class="md:pr-10 md:py-6">
                   {projects
-                    .filter((item) => item.topic == active)
+                    .filter((item) => item.topic === active)
                     .map((item, index) => {
                       return (
                         <div class="flex relative pb-12">

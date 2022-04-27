@@ -1,7 +1,6 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Disclosure } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
@@ -65,7 +64,7 @@ export default function Example() {
                         className={classNames(
                           item.current
                             ? "bg-gray-900 text-white"
-                            : item.name == "Teraki"
+                            : item.name === "Teraki"
                             ? "hover:text-gray-900 text-white hover:bg-green-500"
                             : "text-gray-300 hover:bg-gray-900",
                           "px-3 py-2 rounded-md text-sm font-medium transition ease-in-out delay-150 hover:-translate-y-1"
@@ -77,7 +76,8 @@ export default function Example() {
                     ))}
                     <a
                       target="_blank"
-                      href={"https://merakilearn.org"}
+                      href="https://merakilearn.org"
+                      rel="noreferrer"
                       className="px-3 py-2 rounded-md text-sm font-medium transition ease-in-out delay-150 hover:-translate-y-1 hover:text-gray-900 text-white hover:bg-green-500"
                     >
                       Teraki
