@@ -6,7 +6,6 @@ import users from "./team.json"
 import Team_card from "./Team_card";
 
 export default function Example() {
-  console.log(users.slice(0,2));
   return (
     <>
       <section id="team" class="text-gray-400 bg-gray-900 body-font">

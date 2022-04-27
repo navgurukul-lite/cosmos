@@ -2,6 +2,7 @@
 import { Disclosure } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -10,9 +11,10 @@ function classNames(...classes) {
 export default function Example() {
   const [navigation, setnavigation] = useState([]);
 
+  const location = useLocation();
   useEffect(() => {
     return () => {
-      const pathname = window.location.pathname;
+      const pathname = location.pathname
       const new_navigation = [
         { name: "About", href: "/about", current: false },
         { name: "Hackthon", href: "/hackthon", current: false },
