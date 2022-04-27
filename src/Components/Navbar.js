@@ -2,6 +2,7 @@
 import { Disclosure } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
 function classNames(...classes) {
@@ -13,16 +14,22 @@ export default function Example() {
 
   const pathname = location.pathname;
   const navigation = [
-    { name: "About", href: "/about", current: "/about" === pathname? true : false },
-    { name: "Hackthon", href: "/hackthon", current: "/hackthon" === pathname? true : false },
-    { name: "Team", href: "/team", current: "/team" === pathname? true : false },
     {
-      name: "Teraki",
-      href: "https://www.merakilearn.org/",
-      current: false,
+      name: "About",
+      href: "/about",
+      current: "/about" === pathname ? true : false,
+    },
+    {
+      name: "Hackthon",
+      href: "/hackthon",
+      current: "/hackthon" === pathname ? true : false,
+    },
+    {
+      name: "Team",
+      href: "/team",
+      current: "/team" === pathname ? true : false,
     },
   ];
-  console.log(navigation);
 
   return (
     <Disclosure as="nav" className="bg-gray-800">
@@ -52,22 +59,29 @@ export default function Example() {
                 <div className=" absolute  right-0 hidden sm:block sm:ml-6">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
-                        href={item.href}
+                        to={item.href}
                         className={classNames(
                           item.current
                             ? "bg-gray-900 text-white"
                             : item.name == "Teraki"
                             ? "hover:text-gray-900 text-white hover:bg-green-500"
                             : "text-gray-300 hover:bg-gray-900",
-                          "px-3 py-2 rounded-md text-sm font-medium transition ease-in-out delay-150 hover:-translate-y-2"
+                          "px-3 py-2 rounded-md text-sm font-medium transition ease-in-out delay-150 hover:-translate-y-1"
                         )}
                         aria-current={item.current ? "page" : undefined}
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
+                    <a
+                      target="_blank"
+                      href={"https://merakilearn.org"}
+                      className="px-3 py-2 rounded-md text-sm font-medium transition ease-in-out delay-150 hover:-translate-y-1 hover:text-gray-900 text-white hover:bg-green-500"
+                    >
+                      Teraki
+                    </a>
                   </div>
                 </div>
               </div>
