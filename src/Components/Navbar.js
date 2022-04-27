@@ -9,32 +9,20 @@ function classNames(...classes) {
 }
 
 export default function Example() {
-  const [navigation, setnavigation] = useState([]);
-
   const location = useLocation();
-  useEffect(() => {
-    return () => {
-      const pathname = location.pathname
-      const new_navigation = [
-        { name: "About", href: "/about", current: false },
-        { name: "Hackthon", href: "/hackthon", current: false },
-        { name: "Team", href: "/team", current: true },
-        {
-          name: "Teraki",
-          href: "https://www.merakilearn.org/",
-          current: false,
-        },
-      ];
-      for (var n of new_navigation) {
-        if (n.href == pathname) {
-          n.current = true;
-        } else {
-          n.current = false;
-        }
-      }
-      setnavigation(new_navigation);
-    };
-  }, []);
+
+  const pathname = location.pathname;
+  const navigation = [
+    { name: "About", href: "/about", current: "/about" === pathname? true : false },
+    { name: "Hackthon", href: "/hackthon", current: "/hackthon" === pathname? true : false },
+    { name: "Team", href: "/team", current: "/team" === pathname? true : false },
+    {
+      name: "Teraki",
+      href: "https://www.merakilearn.org/",
+      current: false,
+    },
+  ];
+  console.log(navigation);
 
   return (
     <Disclosure as="nav" className="bg-gray-800">
