@@ -1,19 +1,39 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Disclosure } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
-
-const navigation = [
-  { name: "About", href: "#about", current: false },
-  { name: "Projects", href: "#projects", current: false },
-  { name: "Team", href: "#team", current: true },
-  { name: "Teraki", href: "https://www.merakilearn.org/", current: false },
-];
+import { useEffect, useState } from "react";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 export default function Example() {
+  const [navigation, setnavigation] = useState([]);
+
+  useEffect(() => {
+    return () => {
+      const pathname = window.location.pathname;
+      const new_navigation = [
+        { name: "About", href: "/about", current: false },
+        { name: "Hackthon", href: "/hackthon", current: false },
+        { name: "Team", href: "/team", current: true },
+        {
+          name: "Teraki",
+          href: "https://www.merakilearn.org/",
+          current: false,
+        },
+      ];
+      for (var n of new_navigation) {
+        if (n.href == pathname) {
+          n.current = true;
+        } else {
+          n.current = false;
+        }
+      }
+      setnavigation(new_navigation);
+    };
+  }, []);
+
   return (
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
@@ -34,7 +54,7 @@ export default function Example() {
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex-shrink-0 flex items-center">
                   <h2 className="text-2xl font-bold  text-transparent bg-clip-text bg-gradient-to-br from-red-400 to-orange-600">
-                    Navgurukul {" "}
+                    Navgurukul{" "}
                     <span className="text-base hover:animate-spin">Lite</span>
                     <span class="animate-ping absolute mt-2 h-1 ml-1 w-1 rounded-full bg-white opacity-full"></span>
                   </h2>
@@ -48,7 +68,9 @@ export default function Example() {
                         className={classNames(
                           item.current
                             ? "bg-gray-900 text-white"
-                            : (item.name == "Teraki"? "hover:text-gray-900 text-white hover:bg-green-500":"text-gray-300 hover:bg-gray-900"),
+                            : item.name == "Teraki"
+                            ? "hover:text-gray-900 text-white hover:bg-green-500"
+                            : "text-gray-300 hover:bg-gray-900",
                           "px-3 py-2 rounded-md text-sm font-medium transition ease-in-out delay-150 hover:-translate-y-2"
                         )}
                         aria-current={item.current ? "page" : undefined}
