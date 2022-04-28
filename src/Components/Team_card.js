@@ -6,10 +6,10 @@ const Team_card = ({item}) => {
       <div class="h-full flex sm:flex-row flex-col items-center sm:justify-center justify-center text-center sm:text-left">
         <img
           alt="team"
-          class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4 animate__animated animate__backInLeft"
+          class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4 animate__animated animate__zoomIn"
           src={item.photo}
         />
-        <div class="flex-grow sm:pl-8 animate__animated animate__backInRight">
+        <div class="flex-grow sm:pl-8 animate__animated animate__zoomInUp">
           <h2 class="title-font font-medium text-lg text-white">{item.name}</h2>
           <h3 class="text-gray-300 mb-3">{item.position}</h3>
           <p class="mb-4">{item.quotes}</p>
