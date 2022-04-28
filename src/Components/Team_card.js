@@ -2,14 +2,14 @@ import React from "react";
 
 const Team_card = ({item}) => {
   return (
-    <div class="p-4 lg:w-1/2 hover:bg-slate-850 rounded-sm transition ease-in-out duration-150 hover:-translate-y-1">
+    <div class="p-4 lg:w-1/2 hover:bg-slate-850 rounded-sm transition ease-in-out duration-150 hover:-translate-y-1 ">
       <div class="h-full flex sm:flex-row flex-col items-center sm:justify-center justify-center text-center sm:text-left">
         <img
           alt="team"
-          class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4"
+          class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4 animate__animated animate__backInLeft"
           src={item.photo}
         />
-        <div class="flex-grow sm:pl-8">
+        <div class="flex-grow sm:pl-8 animate__animated animate__backInRight">
           <h2 class="title-font font-medium text-lg text-white">{item.name}</h2>
           <h3 class="text-gray-300 mb-3">{item.position}</h3>
           <p class="mb-4">{item.quotes}</p>

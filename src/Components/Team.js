@@ -11,7 +11,7 @@ export default function Example() {
       <section id="team" class="text-gray-400 bg-gray-900 body-font">
         <div class="container px-5 py-24 mx-auto">
           <div class="flex flex-col text-center w-full mb-20">
-            <h1 class="text-2xl font-medium title-font mb-4 text-white tracking-widest">
+            <h1 class="text-2xl font-medium title-font mb-4 text-white tracking-widest animate__animated animate__backInUp">
               OUR TEAM
               <span class="animate-ping absolute h-1 ml-1 w-1 rounded-full bg-orange-600 opacity-full"></span>
 

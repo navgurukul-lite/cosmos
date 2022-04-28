@@ -16,10 +16,10 @@ const Index = () => {
         <div class="container px-5 py-24 mx-auto">
           <div class="lg:w-4/5 mx-auto flex flex-wrap">
             <div class="w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
-              <h2 class="text-sm text-center title-font text-gray-500 tracking-widest">
+              <h2 class="text-sm text-center title-font text-gray-500 tracking-widest animate__animated animate__lightSpeedInRight">
                 APR 2022
               </h2>
-              <h1 class="text-white text-3xl text-center title-font font-medium mb-4">
+              <h1 class="text-white text-3xl text-center title-font font-medium mb-4 animate__animated animate__lightSpeedInLeft">
                 Coding Hackthon
                 <span class="animate-ping absolute h-1 ml-1 w-1 rounded-full bg-orange-600 opacity-full"></span>
 
@@ -32,7 +32,7 @@ const Index = () => {
                     rel="noreferrer"
                     onClick={()=>changeActive(item)}
                       class={
-                        "flex-grow border-b-2 py-2 text-lg px-1 cursor-pointer hover:border-orange-400 text-center hover:text-orange-400" +
+                        "animate__animated animate__bounceInUp flex-grow border-b-2 py-2 text-lg px-1 cursor-pointer hover:border-orange-400 text-center hover:text-orange-400" +
                         (item === active
                           ? " text-orange-500 border-orange-500"
                           : " border-gray-800")
@@ -43,7 +43,7 @@ const Index = () => {
                   );
                 })}
               </div>
-              <div class="flex flex-wrap w-full">
+              <div class="flex flex-wrap w-full overflow-hidden animate__animated animate__bounceInUp">
                 <div class="md:pr-10 md:py-6">
                   {projects
                     .filter((item) => item.topic === active)
