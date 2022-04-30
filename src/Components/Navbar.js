@@ -28,6 +28,11 @@ export default function Example() {
       href: "/team",
       current: "/team" === pathname ? true : false,
     },
+    {
+      name: "Kitchu",
+      href: "/kitchu",
+      current: "/kitchu" === pathname ? true : false,
+    },
   ];
 
   return (
