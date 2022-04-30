@@ -1,42 +1,52 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
 import Hero from "../../Components/Team";
 import Projects from "../../Components/Projects";
-const index = () => {
-  const kitchen_terns = {
-    Yesterday: {
-      team: [
-        "Pratik Deshmukh",
-        "Anand Patel",
-        "Prakash Simhandri",
-        "Abhishek Mehra",
-      ],
-      menu: { breakfast: "Pohe", lunch: "dal chawal", dinner: "Rice" },
+import axios from "axios";
+
+const Index = () => {
+  const [kitchen_terns, set_kitchen_terns] = useState({
+    yesterday: {
+      team: ["loading...", "loading...", "loading...", "loading..."],
+      menu: {
+        breakfast: "Loading...",
+        lunch: "loading...",
+        dinner: "loading...",
+      },
     },
-    Today: {
-      team: [
-        "Pratik Deshmukh",
-        "Anand Patel",
-        "Prakash Simhandri",
-        "Abhishek Mehra",
-      ],
-      menu: { breakfast: "Pohe", lunch: "dal chawal", dinner: "Rice" },
+    today: {
+      team: ["loading...", "loading...", "loading...", "loading..."],
+      menu: {
+        breakfast: "Loading...",
+        lunch: "loading...",
+        dinner: "loading...",
+      },
     },
-    Tomorrow: {
-      team: [
-        "Pratik Deshmukh",
-        "Anand Patel",
-        "Prakash Simhandri",
-        "Abhishek Mehra",
-      ],
-      menu: { breakfast: "Pohe", lunch: "dal chawal", dinner: "Rice" },
+    tomorrow: {
+      team: ["loading...", "loading...", "loading...", "loading..."],
+      menu: {
+        breakfast: "Loading...",
+        lunch: "loading...",
+        dinner: "loading...",
+      },
     },
-  };
+  });
+
+  useEffect(() => {
+    axios
+      .get(
+        "https://script.google.com/macros/s/AKfycbzqCpvezyfjtanp_5kmvyUS8-EKJbX5-YuqAEe0NT0zbRReiWnNPDHsozcWfhnOaR84/exec"
+      )
+      .then((data) => {
+        console.log(data);
+        set_kitchen_terns(data.data);
+      });
+  }, []);
   return (
     <div>
       <Navbar />
-      <section class="text-gray-400 bg-gray-900 body-font overflow-hidden">
+      <section class="text-gray-400 bg-gray-900 body-font h-screen overflow-hidden">
         <div class="container px-5 py-24 mx-auto">
           <div class="flex flex-col text-center w-full mb-20">
             <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-white animate__animated animate__lightSpeedInRight">
@@ -54,7 +64,7 @@ const index = () => {
                   <div
                     class={
                       "h-full p-6 rounded-lg border-2  flex flex-col relative overflow-hidden hover:animate-pulse " +
-                      (item == "Today"
+                      (item == "today"
                         ? "border-orange-400"
                         : "border-gray-700")
                     }
@@ -62,7 +72,7 @@ const index = () => {
                     <span
                       class={
                         " text-white px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl " +
-                        (item == "Today" ? "bg-orange-500" : "bg-gray-500")
+                        (item == "today" ? "bg-orange-500" : "bg-gray-500")
                       }
                     >
                       {item}
@@ -84,20 +94,18 @@ const index = () => {
                     <h2 class="text-sm tracking-widest mt-3 text-gray-300 title-font mb-5 font-medium">
                       Menu
                     </h2>
-                    {Object.keys(kitchen_terns[item].menu).map(
-                      (i, index) => {
-                        return (
-                          <>
-                            <h2 class="tracking-widest text-xs title-font font-medium capitalize text-orange-400 mb-1">
-                              {i}
-                            </h2>
-                            <h1 class="title-font text-xlg font-medium text-gray-400 mb-3 capitalize">
-                              {kitchen_terns[item].menu[i]}
-                            </h1>
-                          </>
-                        );
-                      }
-                    )}
+                    {Object.keys(kitchen_terns[item].menu).map((i, index) => {
+                      return (
+                        <>
+                          <h2 class="tracking-widest text-xs title-font font-medium capitalize text-orange-400 mb-1">
+                            {i}
+                          </h2>
+                          <h1 class="title-font text-xlg font-medium text-gray-400 mb-3 capitalize">
+                            {kitchen_terns[item].menu[i]}
+                          </h1>
+                        </>
+                      );
+                    })}
                   </div>
                 </div>
               );
@@ -110,4 +118,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
