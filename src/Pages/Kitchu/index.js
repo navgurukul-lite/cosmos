@@ -46,7 +46,7 @@ const Index = () => {
   return (
     <div>
       <Navbar />
-      <section class="text-gray-400 bg-gray-900 body-font h-screen overflow-hidden">
+      <section class="text-gray-400 bg-gray-900 body-font h-screen">
         <div class="container px-5 py-24 mx-auto">
           <div class="flex flex-col text-center w-full mb-20">
             <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-white animate__animated animate__lightSpeedInRight">
