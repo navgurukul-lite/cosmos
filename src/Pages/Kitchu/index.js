@@ -53,7 +53,7 @@ const index = () => {
                 <div class="p-4 xl:w-1/4 md:w-1/2 w-full animate__animated animate__lightSpeedInLeft">
                   <div
                     class={
-                      "h-full p-6 rounded-lg border-2  flex flex-col relative overflow-hidden " +
+                      "h-full p-6 rounded-lg border-2  flex flex-col relative overflow-hidden hover:animate-pulse " +
                       (item == "Today"
                         ? "border-orange-400"
                         : "border-gray-700")
