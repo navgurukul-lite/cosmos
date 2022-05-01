@@ -39,8 +39,11 @@ const Index = () => {
         "https://script.google.com/macros/s/AKfycbzqCpvezyfjtanp_5kmvyUS8-EKJbX5-YuqAEe0NT0zbRReiWnNPDHsozcWfhnOaR84/exec"
       )
       .then((data) => {
-        console.log(data);
-        set_kitchen_terns(data.data);
+        set_kitchen_terns({
+          yesterday: data.data["yesterday"],
+          today: data.data["today"],
+          tomorrow: data.data["tomorrow"],
+        });
       });
   }, []);
   return (
@@ -71,7 +74,7 @@ const Index = () => {
                   >
                     <span
                       class={
-                        " text-white px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl " +
+                        " text-white px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl capitalize " +
                         (item == "today" ? "bg-orange-500" : "bg-gray-500")
                       }
                     >
