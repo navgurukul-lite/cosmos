@@ -49,6 +49,7 @@ const Index = () => {
   return (
     <div>
       <Navbar />
+      
       <section class="text-gray-400 bg-gray-900 body-font">
         <div class="container px-5 py-24 mx-auto">
           <div class="flex flex-col text-center w-full mb-20">
@@ -60,13 +61,15 @@ const Index = () => {
               People who love to eat are always the best people.
             </p>
           </div>
+          
           <div class="flex flex-wrap justify-center -m-4">
             {Object.keys(kitchen_terns).map((item, index) => {
               return (
+
                 <div class="p-4 xl:w-1/4 md:w-1/2 w-full animate__animated animate__lightSpeedInLeft">
                   <div
                     class={
-                      "h-full p-6 rounded-lg border-2  flex flex-col relative overflow-hidden hover:animate-pulse " +
+                      "h-full p-6 rounded-lg border-2  flex flex-col relative overflow-hidden " +
                       (item == "today"
                         ? "border-orange-400"
                         : "border-gray-700")

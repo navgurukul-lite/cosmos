@@ -32,6 +32,10 @@ export default function Example() {
       name: "Kitchu",
       href: "/kitchu",
       current: "/kitchu" === pathname ? true : false,
+    },{
+      name: "Mentorship",
+      href: "/mentorship",
+      current: "/mentorship" === pathname ? true : false,
     },
   ];
 
