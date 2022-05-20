@@ -81,11 +81,21 @@ export default function Example() {
                     ))}
                     <a
                       target="_blank"
+                      href="https://blogofile.herokuapp.com/"
+                      rel="noreferrer"
+                      className="px-3 py-2 rounded-md text-sm font-medium transition ease-in-out delay-150 hover:-translate-y-1 hover:text-gray-900 text-white hover:bg-orange-500"
+                    >
+                      Blogofile
+                      
+                    </a>
+                    <a
+                      target="_blank"
                       href="https://merakilearn.org"
                       rel="noreferrer"
                       className="px-3 py-2 rounded-md text-sm font-medium transition ease-in-out delay-150 hover:-translate-y-1 hover:text-gray-900 text-white hover:bg-green-500"
                     >
                       Teraki
+                      
                     </a>
                   </div>
                 </div>
@@ -111,6 +121,17 @@ export default function Example() {
                   {item.name}
                 </Disclosure.Button>
               ))}
+              <Disclosure.Button
+                key="Blogofile"
+                as="a"
+                href="https://blogofile.herokuapp.com/"
+                className={
+                  "text-gray-300 hover:bg-gray-700 hover:text-white" +
+                  "block px-3 py-2 rounded-md text-base font-medium"
+                }
+              >
+                Blogofile
+              </Disclosure.Button>
               <Disclosure.Button
                 key="Teraki"
                 as="a"
