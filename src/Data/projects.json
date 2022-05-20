@@ -41,17 +41,17 @@
   },
   {
     "name": "Blog App",
-    "Content": "This blog app reads and writes data to a data file using HTTP POST requests and data are displayed in response to HTTP GET requests.",
+    "Content": "In this project, you have to write the backend part of the blog app, where the user can register and log in and after that, he can post and view the blogs. and also he can like and dislike. For this app, you should use Express, Mysql, Knex, and JWT for authentication.\n\n1. Register using email & password ( use JWT for authentication )2. log in (varify email and password)3. Create a post (Only logged in users can create a post)4. See all posts from other users on the home page.5. Get/update/delete blog by id.6. Logged in users can like/dislike anyone's blog.7. See how many likes/dislikes a post has in real-time.",
     "topic": "NodeJs"
   },
   {
     "name": "Zomato API",
-    "Content": "You have to used Zomato-API (https://apitracker.io/a/zomato ) to get the details of restaurants present in a particular location. You'll be asked a location to fetch the details like average cost for two people, price ranges, has online delivery or not, and cuisines of that location.    ",
+    "Content": "You have to used Zomato-API (https://apitracker.io/a/zomato ) to get the details of restaurants present in a particular location. You'll be asked a location to fetch the details like average cost for two people, price ranges, has online delivery or not, and cuisines of that location.",
     "topic": "NodeJs"
   },
   {
-    "name": "Turing e-commerce API",
-    "Content": "Best practices are used so that project can be scaled.All errors are handled properly, using the mentioned documentation and I have made a LOGGER which dislays errors perfectly.MVC Framework is used in this API project.Budling and minification is used so that codes are not visible to anyone.",
+    "name": "Passport-Strategies",
+    "Content": "In this project you have to implement Google, LinkedIn and GiHub strategies(http://www.passportjs.org/) where the user can login by using these strategies.",
     "topic": "NodeJs"
   }
 ]
