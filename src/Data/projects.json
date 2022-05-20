@@ -1,7 +1,7 @@
 [
   {
     "name": "Blog App",
-    "Content": "In this project, you have to write the backend part of the blog app, where the user can register and log in and after that, he can post and view the blogs. and also he can like and dislike. For this app, you should use Express, Mysql, Knex, and **JWT** for authentication.\n\n1. Register using email & password ( use JWT for authentication )\n2. log in (varify email and password)\n3. Create a post (Only logged in users can create a post)\n4. See all posts from other users on the home page.\n5. Get/update/delete blog by id.\n6. Logged in users can like/dislike anyone's blog.\n7. See how many likes/dislikes a post has in real-time.",
+    "Content": "In this project, you have to write the backend part of the blog app, where the user can register and log in and after that, he can post and view the blogs. and also he can like and dislike. For this app, you should use Express, Mysql, Knex, and **JWT** for authentication.\n\n1. Register using email & password ( use JWT for authentication )\n2. log in (varify email and password)\n3. Create a post (Only logged in users can create a post)\n4. See all posts from other users on the home page.\n5. Get/update/delete blog by id.\n6. Logged in users can like/dislike anyone's blog.\n7. See how many likes/dislikes a post has in real-time.\n\nLive Demo: [`BlogoFile`](https://blogofile.herokuapp.com)",
     "topic": "NodeJs"
   },
   {

@@ -70,7 +70,7 @@ const Index = () => {
                               <ReactMarkdown
                                 components={{
                                   a: ({ node, ...props }) => (
-                                    <a className="text-sky-500" {...props} />
+                                    <a target="_blank" className="text-sky-500" {...props} />
                                   ),
                                 }}
                                 rehypePlugins={[rehypeRaw]}
