@@ -56,7 +56,7 @@ const Index = () => {
               KITCHU
               <span class="animate-ping absolute h-1 ml-1 w-1 rounded-full bg-orange-600 opacity-full"></span>
             </h1>
-            <span class="animate__animated animate__rubberBand animate__slower inline-block py-1 px-2  text-orange-500 text-sm font-semibold tracking-widest w-1/2 ml-auto mr-auto">
+            <span class="animate__animated animate__rubberBand animate__slower inline-block py-1 px-2  text-orange-500 text-sm font-semibold tracking-widest w-full lg:w-1/2 ml-auto mr-auto">
               Dharamshala campus kitchen 🍴 Warriors
             </span>
             <p class="lg:w-2/3 mx-auto leading-relaxed text-base animate__animated animate__lightSpeedInLeft animate__slower">

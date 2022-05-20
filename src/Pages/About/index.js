@@ -18,7 +18,7 @@ const index = () => {
               to underprivileged girls in India
             </p>
           </div>
-          <div class="w-full lg:w-2/5 animate__animated animate__bounceInRight animate__slow animate__repeat-2">
+          <div class="w-full lg:w-2/5 animate__animated animate__bounceInRight animate__slow">
             <img src="/person-coding.png" alt="Person coding" />
           </div>
         </div>

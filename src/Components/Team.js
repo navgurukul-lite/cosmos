@@ -15,7 +15,7 @@ export default function Example() {
               OUR TEAM
               <span class="animate-ping absolute h-1 ml-1 w-1 rounded-full bg-orange-600 opacity-full"></span>
             </h1>
-            <span class="animate__animated animate__rubberBand inline-block py-1 px-2  text-orange-500 text-sm font-semibold tracking-widest w-1/2 ml-auto mr-auto animate__slower">
+            <span class="animate__animated animate__rubberBand inline-block py-1 px-2  text-orange-500 text-sm font-semibold tracking-widest w-full lg:w-1/2 ml-auto mr-auto animate__slower">
               Alone we can do so little; together we can do so much.
             </span>
           </div>
